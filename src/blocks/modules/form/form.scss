@@ -1,0 +1,41 @@
+.form {
+
+    &__label {
+        display: inline-block;
+        margin-bottom: var(--space-2xs);
+    }
+    
+    &__item:not(:last-child) {
+        margin-bottom: var(--space-xl);
+    }
+
+    &__control {
+        display: flex;
+        position: relative;
+        
+        @media screen and (max-width: $screen-s) {
+            flex-direction: column;
+        }
+
+        &_type {
+            &_minutes {
+                display: inline-block;
+                width: 52px;
+                margin: var(--space-xs);
+
+                &_input {
+                    text-align: end;
+                }
+            }
+        }
+    }
+    
+    &__button {
+        margin-right: var(--space-xs);
+
+        @media screen and (max-width: $screen-s) {
+            margin-bottom: var(--space-m);
+            margin-right: 0;
+        }
+    }
+}

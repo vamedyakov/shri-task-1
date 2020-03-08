@@ -1,0 +1,11 @@
+.detail {
+    width: 100%;
+
+    &__content {
+        margin-bottom: var(--space-m);
+
+        @media screen and (max-width: $screen-s) {
+            margin-bottom: var(--space-l);
+        }
+    }
+}

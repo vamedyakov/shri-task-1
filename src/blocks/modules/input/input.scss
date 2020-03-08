@@ -1,0 +1,32 @@
+.input {
+    width: 100%;
+    height: 36px;
+    border: 2px solid var(--color-bg-border);
+    border-radius: var(--col-round);
+    padding: 11px 13px 10px 13px;
+    outline: none;
+
+    &::placeholder {
+        opacity: 0.3;
+    }
+
+    &:focus {
+        border-color: var(--color-bg-border-focus);
+    }
+    
+    &__icon {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        margin: 10px;
+
+        +.input {
+            padding-right: 30px;
+        }
+    }
+
+    &:not(:placeholder-shown) + .input__icon {
+        display: block;
+    }
+}
